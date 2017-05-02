@@ -44,7 +44,7 @@ class Partitioner extends Component {
     
     this.setState(() => ({ availableItems, selectedItems }));
     this.props.onSelect(eventArgs);
-    this.props.onChange(eventArgs);
+    this.props.onChange({ ...eventArgs, type: "select" });
   }
   deselectItem(item) {
     const availableItems = [...this.state.availableItems, item];
@@ -55,7 +55,7 @@ class Partitioner extends Component {
     
     this.setState(() => ({ availableItems, selectedItems }));
     this.props.onDeselect(eventArgs);
-    this.props.onChange(eventArgs);
+    this.props.onChange({ ...eventArgs, type: "deselect" });
   }
   getEventArgs(item, available, selected) {
     return {
@@ -86,9 +86,9 @@ Partitioner.defaultProps = {
   getItemKey: id,
   getItemValue: id,
   items: [],
-  onChange: item => noop,
-  onDeselect: item => console.log(`${item.value} deselected`),
-  onSelect: item => console.log(`${item.value} selected`),
+  onChange: noop,
+  onDeselect: noop,
+  onSelect: noop,
   selectedItems: []
 };
 
