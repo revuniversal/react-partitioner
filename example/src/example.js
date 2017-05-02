@@ -1,18 +1,18 @@
-import React, {Component} from "react";
-import ReactDOM from "react-dom";
-import Partitioner from "react-partitioner";
-import List from "./list";
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import Partitioner from 'react-partitioner';
+import List from './list';
 
 const items = [
-  "black",
-  "red",
-  "orange", 
-  "yellow", 
-  "green", 
-  "blue", 
-  "indigo", 
-  "violet",
-  "white"
+  'black',
+  'red',
+  'orange', 
+  'yellow', 
+  'green', 
+  'blue', 
+  'indigo', 
+  'violet',
+  'white'
 ];
 
 class App extends Component {
@@ -21,32 +21,32 @@ class App extends Component {
       <div>
         <Partitioner 
           items={items} 
-          onChange={e => console.log(e.type + " " + e.item)}
+          onChange={e => console.log(e.type + ' ' + e.item)}
         >
           {({availableItems, selectedItems, selectItem, deselectItem}) => (
-            <div style={{margin: "0px", padding: "0px"}}>
+            <div style={{margin: '0px', padding: '0px'}}>
               <List
                 items={availableItems}
                 onItemClick={selectItem}
                 style={{
-                  float: "left",
-                  width: "50%",
-                  height: "80px",
-                  overflowY: "scroll",
-                  margin: "-1px",
-                  border: "1px solid black"
+                  float: 'left',
+                  width: '50%',
+                  height: '80px',
+                  overflowY: 'scroll',
+                  margin: '-1px',
+                  border: '1px solid black'
                 }}
               />
               <List
                 items={selectedItems}
                 onItemClick={deselectItem}
                 style={{
-                  float: "left",
-                  width: "50%",
-                  height: "80px",
-                  overflowY: "scroll",
-                  margin: "-1px",
-                  border: "1px solid black"
+                  float: 'left',
+                  width: '50%',
+                  height: '80px',
+                  overflowY: 'scroll',
+                  margin: '-1px',
+                  border: '1px solid black'
                 }}
               />
             </div>
@@ -57,4 +57,4 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));

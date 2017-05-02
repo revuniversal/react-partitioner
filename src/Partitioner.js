@@ -1,5 +1,5 @@
-import React, { Component, Children, cloneElement } from "react";
-import PropTypes from "prop-types";
+import React, { Component, Children, cloneElement } from 'react';
+import PropTypes from 'prop-types';
 
 class Partitioner extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class Partitioner extends Component {
     
     this.setState(() => ({ availableItems, selectedItems }));
     this.props.onSelect(eventArgs);
-    this.props.onChange({ ...eventArgs, type: "select" });
+    this.props.onChange({ ...eventArgs, type: 'select' });
   }
   deselectItem(item) {
     const availableItems = [...this.state.availableItems, item];
@@ -55,7 +55,7 @@ class Partitioner extends Component {
     
     this.setState(() => ({ availableItems, selectedItems }));
     this.props.onDeselect(eventArgs);
-    this.props.onChange({ ...eventArgs, type: "deselect" });
+    this.props.onChange({ ...eventArgs, type: 'deselect' });
   }
   getEventArgs(item, available, selected) {
     return {
