@@ -19,11 +19,36 @@ class App extends Component {
   render () {
     return (
       <div>
-        <Partitioner items={items}>
+        <Partitioner 
+          items={items} 
+          onChange={e => console.log(e.type + " " + e.item)}
+        >
           {({availableItems, selectedItems, selectItem, deselectItem}) => (
-            <div>
-              <List items={availableItems} onClick={selectItem} />
-              <List items={selectedItems} onClick={deselectItem} />
+            <div style={{margin: "0px", padding: "0px"}}>
+              <List
+                items={availableItems}
+                onItemClick={selectItem}
+                style={{
+                  float: "left",
+                  width: "50%",
+                  height: "80px",
+                  overflowY: "scroll",
+                  margin: "-1px",
+                  border: "1px solid black"
+                }}
+              />
+              <List
+                items={selectedItems}
+                onItemClick={deselectItem}
+                style={{
+                  float: "left",
+                  width: "50%",
+                  height: "80px",
+                  overflowY: "scroll",
+                  margin: "-1px",
+                  border: "1px solid black"
+                }}
+              />
             </div>
           )}
         </Partitioner>
