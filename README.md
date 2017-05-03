@@ -84,11 +84,11 @@ const Example = () => (
 
 #### TODOS
 
-[ ] Add more examples to readme
-[ ] Add deeper usage explanation to readme
-[ ] Document child function usage
-[ ] Add jsdoc comments to Partitioner
-[ ] Learn to type `partitioner` instead of `partioner` without pausing for 5 seconds
+- [ ] Add more examples to readme
+- [ ] Add deeper usage explanation to readme
+- [ ] Document child function usage
+- [ ] Add jsdoc comments to Partitioner
+- [ ] Learn to type `partitioner` instead of `partioner` without pausing for 5 seconds
 
 ## Development (`src`, `lib` and the build process)
 
@@ -101,4 +101,3 @@ To build, watch and serve the examples (which will also watch the component sour
 MIT
 
 Copyright (c) 2017 Rev Herr.
-
