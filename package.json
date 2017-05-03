@@ -1,6 +1,6 @@
 {
   "name": "react-partitioner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Partitioner",
   "main": "lib/Partitioner.js",
   "author": "Rev Herr",
